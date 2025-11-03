@@ -1,13 +1,13 @@
-# React Payment Inputs
+# React Payment Inputs + CUBA Card Types
 
 > A React Hook & Container to help with payment card input fields.
 
 
-<p align="center"><img src="./assets/react-payment-inputs.png" width="500px" style="margin-bottom: 1rem; margin-top: 1rem;"></img></p>
+<p align="center"><img src="./assets/cuba-payment-inputs.png" width="500px" style="margin-bottom: 1rem; margin-top: 1rem;"></img></p>
 
 <p align="center"><img src="./assets/wrapper.gif" width="500px"></img></p>
 
-- [React Payment Inputs](#react-payment-inputs)
+- [React Payment Inputs](#cuba-payment-inputs)
   - [Demos](#demos)
   - [Requirements](#requirements)
   - [Installation](#installation)
@@ -65,7 +65,7 @@
   - [Custom card images](#custom-card-images)
   - [License](#license)
 
-## [Demos](https://medipass.github.io/react-payment-inputs)
+## [Demos](https://medipass.github.io/cuba-payment-inputs)
 
 ## Requirements
 
@@ -74,13 +74,13 @@ Ensure you are running on a hooks-compatible version of React (v16.8 & above).
 ## Installation
 
 ```
-npm install react-payment-inputs --save
+npm install cuba-payment-inputs --save
 ```
 
 or install with [Yarn](https://yarnpkg.com) if you prefer:
 
 ```
-yarn add react-payment-inputs
+yarn add cuba-payment-inputs
 ```
 
 ## Usage
@@ -97,7 +97,7 @@ If you'd like to use the hooks version of React Payment Inputs, you can import `
 
 ```jsx
 import React from 'react';
-import { usePaymentInputs } from 'react-payment-inputs';
+import { usePaymentInputs } from 'cuba-payment-inputs';
 
 export default function PaymentInputs() {
   const { meta, getCardNumberProps, getExpiryDateProps, getCVCProps } = usePaymentInputs();
@@ -125,7 +125,7 @@ The **props** of `<PaymentInputsContainer>` are the same as the hook [options](#
 
 ```jsx
 import React from 'react';
-import { PaymentInputsContainer } from 'react-payment-inputs';
+import { PaymentInputsContainer } from 'cuba-payment-inputs';
 
 export default function PaymentInputs() {
   return (
@@ -155,8 +155,8 @@ By default, React Payment Inputs does not have built-in styling for it's inputs.
 
 ```jsx
 import React from 'react';
-import { PaymentInputsWrapper, usePaymentInputs } from 'react-payment-inputs';
-import images from 'react-payment-inputs/images';
+import { PaymentInputsWrapper, usePaymentInputs } from 'cuba-payment-inputs';
+import images from 'cuba-payment-inputs/images';
 
 export default function PaymentInputs() {
   const {
@@ -180,7 +180,7 @@ export default function PaymentInputs() {
 
 ### More examples
 
-- [Storybook](https://medipass.github.io/react-payment-inputs)
+- [Storybook](https://medipass.github.io/cuba-payment-inputs)
   - [Source](./stories/index.stories.js)
 
 ## `data = usePaymentInputs(options)`
@@ -348,7 +348,7 @@ You can also supply [custom card images](#custom-card-images) using the `images`
 ##### Example snippet
 
 ```jsx
-import images from 'react-payment-inputs/images';
+import images from 'cuba-payment-inputs/images';
 
 <svg {...getCardImageProps({ images })} />
 ```
@@ -504,8 +504,8 @@ React Payment Inputs allows you to integrate into pretty much any React UI libra
 ```jsx
 import React from 'react';
 import { FieldSet, InputField } from 'fannypack';
-import { usePaymentInputs } from 'react-payment-inputs';
-import images from 'react-payment-inputs/images';
+import { usePaymentInputs } from 'cuba-payment-inputs';
+import images from 'cuba-payment-inputs/images';
 
 export default function PaymentInputs() {
   const {
@@ -558,8 +558,8 @@ export default function PaymentInputs() {
 ```jsx
 import React from 'react';
 import { FieldSet, InputField } from 'fannypack';
-import { usePaymentInputs } from 'react-payment-inputs';
-import images from 'react-payment-inputs/images';
+import { usePaymentInputs } from 'cuba-payment-inputs';
+import images from 'cuba-payment-inputs/images';
 
 export default function PaymentInputs() {
   const {
@@ -615,7 +615,7 @@ React Payment Inputs has support for any type of React form library. Below are e
 
 ```jsx
 import { Formik, Field } from 'formik';
-import { PaymentInputsWrapper, usePaymentInputs } from 'react-payment-inputs';
+import { PaymentInputsWrapper, usePaymentInputs } from 'cuba-payment-inputs';
 
 function PaymentForm() {
   const {
@@ -679,13 +679,13 @@ function PaymentForm() {
 }
 ```
 
-[See this example in Storybook](https://medipass.github.io/react-payment-inputs/?path=/story/usepaymentinputs--using-a-form-library-formik)
+[See this example in Storybook](https://medipass.github.io/cuba-payment-inputs/?path=/story/usepaymentinputs--using-a-form-library-formik)
 
 ### React Final Form
 
 ```jsx
 import { Form, Field } from 'react-final-form';
-import { PaymentInputsWrapper, usePaymentInputs } from 'react-payment-inputs';
+import { PaymentInputsWrapper, usePaymentInputs } from 'cuba-payment-inputs';
 
 function PaymentForm() {
   const {
@@ -744,7 +744,7 @@ function PaymentForm() {
 }
 ```
 
-[See this example in Storybook](https://medipass.github.io/react-payment-inputs/?path=/story/usepaymentinputs--using-a-form-library-react-final-form)
+[See this example in Storybook](https://medipass.github.io/cuba-payment-inputs/?path=/story/usepaymentinputs--using-a-form-library-react-final-form)
 
 ## Customising the in-built style wrapper
 
@@ -752,7 +752,7 @@ React Payment Input's default style wrapper can be customized by supplying a `st
 
 ```jsx
 import { css } from 'styled-components';
-import { usePaymentInputs, PaymentInputsWrapper } from 'react-payment-inputs';
+import { usePaymentInputs, PaymentInputsWrapper } from 'cuba-payment-inputs';
 
 function PaymentForm() {
   const {
@@ -817,7 +817,7 @@ function PaymentForm() {
 }
 ```
 
-[See the example on Storybook](https://medipass.github.io/react-payment-inputs/?path=/story/usepaymentinputs--styled-wrapper-with-custom-styling)
+[See the example on Storybook](https://medipass.github.io/cuba-payment-inputs/?path=/story/usepaymentinputs--styled-wrapper-with-custom-styling)
 
 ## Custom card images
 
@@ -825,7 +825,7 @@ The card images can be customized by passing the `images` attribute to `getCardI
 
 ```jsx
 import { css } from 'styled-components';
-import { usePaymentInputs, PaymentInputsWrapper } from 'react-payment-inputs';
+import { usePaymentInputs, PaymentInputsWrapper } from 'cuba-payment-inputs';
 
 const images = {
   mastercard: (

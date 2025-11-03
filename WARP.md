@@ -4,7 +4,7 @@ This file provides guidance to WARP (warp.dev) when working with code in this re
 
 ## Project Overview
 
-**react-payment-inputs** is a zero-dependency React library that provides hooks and components for payment card input fields. It handles automatic formatting, validation, and focus management for card numbers, expiry dates, CVCs, and ZIP codes. The library supports both hooks (`usePaymentInputs`) and render props (`PaymentInputsContainer`) patterns.
+**cuba-payment-inputs** is a zero-dependency React library that provides hooks and components for payment card input fields. It handles automatic formatting, validation, and focus management for card numbers, expiry dates, CVCs, and ZIP codes. The library supports both hooks (`usePaymentInputs`) and render props (`PaymentInputsContainer`) patterns.
 
 ## Build and Development Commands
 
@@ -97,7 +97,7 @@ Supports custom styling via `styles` prop with schema for: `fieldWrapper`, `inpu
 
 **Rollup Configuration (rollup.config.js):**
 - Builds ES modules, CommonJS, and UMD bundles
-- Uses `rollup-plugin-proxy-directories` to create proxy entry points for individual exports (enables `import { usePaymentInputs } from 'react-payment-inputs/usePaymentInputs'`)
+- Uses `rollup-plugin-proxy-directories` to create proxy entry points for individual exports (enables `import { usePaymentInputs } from 'cuba-payment-inputs/usePaymentInputs'`)
 - External peer dependencies: `react`, `styled-components`, `prop-types`
 
 **Babel Configuration (.babelrc.js):**
@@ -130,7 +130,7 @@ All error messages can be customized via the `errorMessages` option object. Avai
 `PaymentInputsWrapper` requires styled-components >=4.0.0 as a peer dependency. The basic hook can be used without styled-components.
 
 ### Card Images
-Card images are exported from `react-payment-inputs/images` as SVG elements (React components). Supported cards: amex, dinersclub, discover, hipercard, jcb, mastercard, troy, unionpay, visa, and a placeholder.
+Card images are exported from `cuba-payment-inputs/images` as SVG elements (React components). Supported cards: amex, dinersclub, discover, hipercard, jcb, mastercard, troy, unionpay, visa, and a placeholder.
 
 ### Form Library Integration
 The library integrates with form libraries (Formik, React Final Form, etc.) by passing form library handlers into the prop getters. The `meta.erroredInputs` object should be mapped to the form library's error state.

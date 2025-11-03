@@ -1,10 +1,10 @@
 {
-  "name": "react-payment-inputs",
+  "name": "cuba-payment-inputs",
   "version": "1.2.0",
   "description": "A zero-dependency React Hook & Container to help with payment card input fields.",
   "main": "lib/index.js",
   "module": "es/index.js",
-  "unpkg": "umd/react-payment-inputs.min.js",
+  "unpkg": "umd/cuba-payment-inputs.min.js",
   "files": [
     "css",
     "es",

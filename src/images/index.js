@@ -8,6 +8,8 @@ import mastercard from './mastercard.js';
 import placeholder from './placeholder.js';
 import visa from './visa.js';
 import troy from './troy.js';
+import bpa from './bpa.js';
+import bandec from './bandec.js';
 
 export default {
   amex,
@@ -19,5 +21,8 @@ export default {
   mastercard,
   placeholder,
   visa,
-  troy
+  troy,
+  bpa_cup : bpa,
+  bpa_mlc : bpa,
+  bandec_cup : bandec
 };

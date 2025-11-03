@@ -1,6 +1,52 @@
 export const DEFAULT_CVC_LENGTH = 3;
 export const DEFAULT_ZIP_LENGTH = 5;
 export const DEFAULT_CARD_FORMAT = /(\d{1,4})/g;
+var CARD_TYPES_CUBA = [
+  {
+    displayName: 'BPA - CUP',
+    type: 'bpa_cup',
+    format: DEFAULT_CARD_FORMAT,
+    startPattern: /^(9205|9238|9204|9206|9212|9237|9233)/,
+    gaps: [4, 8, 12],
+    lengths: [16],
+    code: false,
+    coin: "CUP",
+    bank: "BPA"
+  },
+  {
+    displayName: 'BPA - MLC',
+    type: 'bpa_mlc',
+    format: DEFAULT_CARD_FORMAT,
+    startPattern: /^(9225|9235|9226|9228|9229)/,
+    gaps: [4, 8, 12],
+    lengths: [16],
+    code: false,
+    coin: "MLC",
+    bank: "BPA"
+  },
+  {
+    displayName: 'BANDEC - CUP',
+    type: 'bandec_cup',
+    format: DEFAULT_CARD_FORMAT,
+    startPattern: /^92(04|05|24|27|34|44|06|10|11|12|13|16|33|37)/,
+    gaps: [4, 8, 12],
+    lengths: [16],
+    code: false,
+    coin: "CUP",
+    bank: "BANDEC"
+  },
+  {
+    displayName: 'BANDEC - MLC',
+    type: 'bandec_mlc',
+    format: DEFAULT_CARD_FORMAT,
+    startPattern: /^92(25|26|28|35|40|29)/,
+    gaps: [4, 8, 12],
+    lengths: [16],
+    code: false,
+    coin: "MLC",
+    bank: "BANDEC"
+  }
+];
 export const CARD_TYPES = [
   {
     displayName: 'Visa',
@@ -133,7 +179,8 @@ export const CARD_TYPES = [
       name: 'CVV',
       length: 3
     }
-  }
+  },
+  ...CARD_TYPES_CUBA
 ];
 
 export const getCardTypeByValue = value => CARD_TYPES.filter(cardType => cardType.startPattern.test(value))[0];
